@@ -1,26 +1,26 @@
 #include <iostream>
 #include <TRandom3.h> 
-#include <TH1.h>
+#include <TCanvas.h>
+#include <TH1F.h>
 using namespace std;
 
 int main()
 {
-
+	const int TRIALS=1000000;//number of trials
 	TRandom3 generator(0);//(0) is the seed of the random number of generator
 	double poissonmean=4.5;//mean for the poisson distribution
-	//cout<<"Generating the random numbers which obey poissons's distribution with mean "<<poissonmean<<endl;
-	TH1F * h=new TH1F("Poisson Histo","poisson Histo",100,0.0,10.0);	
-	for (int i=0;i<100;i++){
+	//Histogram to store the numbers generted by Poisson Distribution
+	
+	TH1F * h=new TH1F("h","Poisson Histo",10,0.0,10.0);	
+	for (int i=0;i<TRIALS;i++)
+	{
 		double randompoisson=generator.Poisson(poissonmean);
-		cout<<randompoisson<<endl;
-		//Creating a histogram for root
-
 		h->Fill(randompoisson);
-		
-		
-	//cout<<"random poisson\t"<<randompoisson<<endl;
 	}	
+
 	h->Draw();
+	h->Fit("gaus"); //fitting the histogram with gaussian function
+	gPad->Print("myhist.png");//save histogram in a file
 	return 0;
 	
 }
