@@ -18,6 +18,7 @@ int main()
 	double randompoisson=generator.PoissonD(poissonmean);
 	cout<<"random poisson\t"<<randompoisson<<endl;
 	}
+	cout<<"done!"<<endl;
 	return 0;
 	
 }
