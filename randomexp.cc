@@ -5,7 +5,7 @@
 #include <TH1F.h>
 using namespace std;
 
-int randomexp()
+int main()
 {
 	const int TRIALS=10000000; //total number of trials
 	TRandom3 generator(0);
