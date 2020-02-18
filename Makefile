@@ -1,5 +1,6 @@
 # variables used by implicit rules to allocate ROOT headers and libs
 CXXFLAGS = $(shell root-config --cflags)
+#shell helps to run shell command
 LDLIBS = $(shell root-config --libs)
 
 SRC = $(wildcard *.cc) # list all files that end with .cc
