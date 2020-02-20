@@ -17,8 +17,9 @@ int main()
 		h->Fill(randomexp);
 	}
 	//Defining a function for Exponential function
-	h->Draw();
+//	h->Draw();
 	h->Fit("expo");
+  //We can only use Fit function instead of both Fit and Draw
 	gPad->Print("myrandomexp.png");
 
 	return 0;
