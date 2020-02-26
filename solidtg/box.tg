@@ -1,0 +1,18 @@
+:volu hall BOX 10*m 10*m 10*m G4_WATER
+:rotm r000 0 0 0
+:rotm r100 30 0 0
+:vis hall OFF
+
+//............BOX............................
+// X Half-length,Y Half-length, Z Half-length
+
+:volu box BOX 4*cm 5*cm 6*cm G4_Ge
+:place box 1 hall r100 0 0 0
+:color box 0.2 0.4 0.8
+
+//...........TUBE............................
+//Inner radius, Outer radius, Half length in z
+
+:volu tube TUBE 2*cm 3*cm 5*cm G4_Ge
+:place tube 1 hall r000 50 30 40
+:color tube 0.5 0.4 0.8
