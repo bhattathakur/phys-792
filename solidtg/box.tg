@@ -1,6 +1,7 @@
 :volu hall BOX 10*m 10*m 10*m G4_WATER
 :rotm r000 0 0 0
 :rotm r100 30 0 0
+:rotm r110 180 0 0
 :vis hall OFF
 
 //............BOX............................
@@ -16,3 +17,47 @@
 :volu tube TUBE 2*cm 3*cm 5*cm G4_Ge
 :place tube 1 hall r000 50 30 40
 :color tube 0.5 0.4 0.8
+
+//...........TUBS............................
+//Inner radius, Outer radius, Half length in z, Staring phi angle, Delta angle of the segment
+
+:volu tubes TUBS 2*cm 3*cm 5*cm 20 120 G4_Ge
+:place tubes 1 hall r000 -150 30 40
+:color tubes 0.5 0.4 0.2
+
+//...........CONE............................
+//Inner radius at -fDz,  inner radius +fDz, outer radius at -fDz, Outer radius +fDz, Half length (z=fDz)
+
+:volu con CONE 2*cm 3*cm 5*cm 7*cm 5*cm G4_Ge
+:place con 1 hall r000 50 -30 -40
+:color con 0.1 0.4 0.2
+
+//...........CONS............................
+//Inner radius at -fDz,  inner radius +fDz, outer radius at -fDz, Outer radius +fDz, Half length (z=fDz)
+//Starting angle of the segment, Delta angle of segment
+
+:volu  cones CONS 2*cm 3*cm 5*cm 7*cm 5*cm 20 93 G4_Ge
+:place cones 1 hall r000 50 30 -40
+:color cones 0.1 0.5 0.2
+
+//............TRD...........................
+//Half-length along x at the surface positioned at -dz, Half-length along x at the surface positioned at +dz
+//Half-length along y at the surface positioned at -dz, Half-length along y at the surface positioned at +dz
+//Half-length of z axis
+
+:VOLU  trdd TRD 2*cm 3*cm 1*cm 2*cm 3*cm G4_Ge
+:PLACE trdd   1 hall r100 10*cm 5*cm 10*cm
+:color trdd  0.3 0.4 0.2
+
+//............PARA...........................
+//Half-length along x at the surface positioned at -dz, Half-length along x at the surface positioned at +dz
+//Half-length along y at the surface positioned at -dz, 
+//Angle formed by the y axis and by the plane joining the center of the faces 
+//paralled to the to the z-x plane at -dy and +dy
+//Polar angle of the line joining the centers of the faces at -dz and +dz in z
+//Azimuthal angle of the line joining the centers of the faces at -dz and +dz in z Half-length y at the 
+//surface positioned at +dz
+
+:VOLU  trdd TRD 2*cm 3*cm 1*cm 2*cm 3*cm G4_Ge
+:PLACE trdd   1 hall r100 10*cm 5*cm 10*cm
+:color trdd  0.3 0.4 0.2
