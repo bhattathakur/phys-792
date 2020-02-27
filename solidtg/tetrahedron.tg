@@ -1,0 +1,16 @@
+:volu hall BOX 10*m 10*m 10*m G4_WATER
+:rotm r000 0 0 0
+:rotm r100 30 0 0
+:rotm r110 180 0 0
+:vis hall OFF
+//............TET.................
+//Anchor point, point 2, point 3, point 4, flag indicating degenerancy of points
+:VOLU tet TET 
+0 0 sqrt(3)
+0 2*sqrt(2/3) -1/sqrt(3)
+-sqrt(2) -sqrt(2/3) -1/sqrt(3)
+sqrt(2) -sqrt(2/3) -1/sqrt(3)
+//1
+G4_Ge
+:PLACE tet 1 hall r100 125*cm 10*cm 50*cm
+:COLOR tet 0.1 0.3 0.5
