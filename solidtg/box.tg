@@ -50,14 +50,99 @@
 :color trdd  0.3 0.4 0.2
 
 //............PARA...........................
-//Half-length along x at the surface positioned at -dz, Half-length along x at the surface positioned at +dz
-//Half-length along y at the surface positioned at -dz, 
+//Half-length in x, y, z
 //Angle formed by the y axis and by the plane joining the center of the faces 
 //paralled to the to the z-x plane at -dy and +dy
 //Polar angle of the line joining the centers of the faces at -dz and +dz in z
 //Azimuthal angle of the line joining the centers of the faces at -dz and +dz in z Half-length y at the 
 //surface positioned at +dz
 
-:VOLU  trdd TRD 2*cm 3*cm 1*cm 2*cm 3*cm G4_Ge
-:PLACE trdd   1 hall r100 10*cm 5*cm 10*cm
-:color trdd  0.3 0.4 0.2
+:VOLU  para PARA 2*cm 3*cm 4*cm 20 30 35 G4_Ge
+:PLACE para   1 hall r100 -130*cm -10*cm -20*cm
+:color para  0.3 0.4 0.2
+
+
+//.............TRAP..........................
+//Half-length along the z-axis (=pDz)
+//Polar angle of the line joining the centers of the faces at -/+pDz
+//Azimuthal angle of the line joining the centers of the faces at -/+pDz
+//Half-length along y of the face at -pDz (=pDy1)
+//Half-length along x of the face at y=-pDy1 of the face at -pDz
+//Half-length along x of the face at y=+pDy1 of the face at -pDz
+//Angle with respect to the y axis from the center of the side at y=-pDy1 to the center at y=+pDy1 
+// of the face at -pDz
+//Half-length along y of the face at +pDz (=pDy2)
+//Half-length along x of the side at y=-pDy2 of the face at +pDz 
+//Half-length along x of the side at y=+pDy2 of the face at +pDz 
+//Angle with respect to the y axis from the center of the side at y=-pDy2 to the center at y=+pDy2 of the face at +pDz
+//alpha1 and alpha2 must be same
+
+//:VOLU  par TRAP 2*cm 30 20 3*cm 4*cm 2*cm 20 2*cm 4*cm 3*cm 20 G4_Ge
+//:PLACE par   1 hall r100 130*cm 10*cm 20*cm
+//:color par  0.3 0.2 0.2
+
+//..............SPHERE..........................
+//Inner radius, Outer radius, Staring angle of the segment, delta angle of segment, Theta starting angle, Theta angle of segment
+
+:VOLU sph SPHERE 2*cm 4*cm 30 45 34 65 G4_Ge
+:PLACE sph 1 hall r000 100*cm 10*cm 10*cm 
+:COLOR sph 0.1 0.4 0.8
+
+//..............ORB.......................
+//Full solid sphere
+//Outer radius
+
+:VOLU  fsd ORB 8*cm G4_Ge
+:PLACE fsd 1 hall r000 100*cm 100*cm 10*cm 
+:COLOR fsd 0.1 0.4 0.4
+
+//...........TORUS......................
+//Inside radius, Outside radius, Swept radius of torus, starting Phi angle, delta angle of the segment
+:VOLU  tor TORUS 3*cm 4*cm 30*cm 45 60 G4_Ge
+:PLACE tor 1 hall r000 -100*cm 10*cm 100*cm 
+:COLOR tor 0.1 0.4 0.3
+
+//............ELLIPTICALTUBE............
+//Half length X, half length Y, half length Z
+
+:VOLU  ellitube ELLIPTICALTUBE 3*cm 4*cm 20*cm G4_Ge
+:PLACE ellitube 1 hall r000 -130*cm 40*cm -130*cm 
+:COLOR ellitube 0.1 0.8 0.3
+
+//..........ELLIPSOID...................
+//Semiaxis in X, Semiaxis in Y, Semiaxis at Z, Lower cut plane level z, Upper cut plane level 
+
+:VOLU  ellipso ELLIPSOID 13*cm 8*cm 10*cm 5*cm 6*cm G4_Ge
+:PLACE ellipso 1 hall r000 -180*cm 40*cm -70*cm 
+:COLOR ellipso 0.8 0.1 0.3
+
+//............ELLIPTICALCONE............
+//Semiaxis in X, semiaxis in Y, Height of elliptical cone, Upper cut plane level 
+
+:VOLU  ellipcone ELLIPTICALCONE 2*cm 1*cm 3*cm 1.5*cm G4_Ge
+:PLACE ellipcone 1 hall r000 180*cm 40*cm 30*cm 
+:COLOR ellipcone 0.4 0.3 0.3
+
+//............HYPE............
+//Inner radius, Outer radius, Inner stereo angle, outer stereo angle, Half length in Z
+
+:VOLU  hype HYPE 10*cm 12*cm 25 35 6*cm G4_Ge
+:PLACE hype 1 hall r100 -100*cm 40*cm 60*cm 
+:COLOR hype 0.4 0.3 0.8
+
+//............TET.................
+//Anchor point, point 2, point 3, point 4, flag indicating degenerancy of points
+:VOLU tet TET 
+0 0 sqrt(3)
+0 2*sqrt(2/3) -1/sqrt(3)
+-sqrt(2) -sqrt(2/3) -1/sqrt(3)
+sqrt(2) -sqrt(2/3) -1/sqrt(3)
+G4_Ge
+:PLACE tet 1 hall r100 225*cm 10*cm 5*cm
+:COLOR tet 0.1 0.3 0.5
+
+//..................TWISTEDBOX......................
+//Twist angle, Half x length, Half y length, Half z length
+:VOLU twistedbox TWISTEDBOX 1 40*cm 35*cm 25*cm G4_Ge
+:PLACE twistedbox 1 hall r100 225*cm -10*cm -20*cm
+:COLOR twistedbox 0.7 0.1 0.4
