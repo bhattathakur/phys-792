@@ -12,7 +12,7 @@ all: $(EXE)
 	@echo make debug: check contents of Makefile variables
 
 clean:
-	rm -rf `cat .gitignore`
+	rm -f `cat .gitignore`
 	#$(RM) $(EXE)
 
 install:
