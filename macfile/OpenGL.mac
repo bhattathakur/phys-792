@@ -1,4 +1,4 @@
-/geometry/source ../solidtg/tetrahedron.tg
+/geometry/source ../solidtg/polycone.tg
 
 /run/initialize
 
@@ -13,7 +13,7 @@
 /vis/viewer/set/background white
 /vis/viewer/set/style surface
 /vis/viewer/set/viewpointThetaPhi 25 35
-#/vis/viewer/zoom 2
+/vis/viewer/zoom 2
 /vis/viewer/flush
 
 /vis/ogl/set/exportFormat pdf
