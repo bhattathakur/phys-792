@@ -143,6 +143,6 @@ G4_Ge
 
 //..................TWISTEDBOX......................
 //Twist angle, Half x length, Half y length, Half z length
-:VOLU twistedbox TWISTEDBOX 1 40*cm 35*cm 25*cm G4_Ge
+:VOLU twistedbox TWISTEDBOX 1 30*cm 40*cm 60*cm G4_Ge
 :PLACE twistedbox 1 hall r100 225*cm -10*cm -20*cm
 :COLOR twistedbox 0.7 0.1 0.4
