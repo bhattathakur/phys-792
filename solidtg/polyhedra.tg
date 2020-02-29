@@ -1,0 +1,26 @@
+:volu hall BOX 10*cm 10*cm 10*cm G4_WATER
+:rotm r000 0 0 0
+:vis hall OFF
+//............POLYHEDRA.................
+//:VOLU polyheda POLYHEDRA -1/4*180 5/4*180 3 7    //initial phi angle, Total phi angle, number of sides, number of rz points
+//0 0			//r,z for each rz corner
+//15 5
+//15 8
+//4 13
+//4 30
+//10 32
+//10 35
+//G4_Ge
+:VOLU polyheda POLYHEDRA
+20
+180
+3
+4
+1900 32
+1800 30
+1800 0
+1900 0
+G4_Ge
+
+:PLACE polyheda 1 hall r000 0.0 0.0 0.0
+:COLOR polyheda 0.1 0.8 0.1
