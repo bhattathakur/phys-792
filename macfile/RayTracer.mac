@@ -1,4 +1,4 @@
-/geometry/source ../solidtg/box.tg
+/geometry/source ../solidtg/polycone.tg
 /run/initialize
 
 /geometry/test/run
