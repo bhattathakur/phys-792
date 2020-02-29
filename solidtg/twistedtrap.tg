@@ -1,0 +1,10 @@
+
+:volu hall BOX 10*m 10*m 10*m G4_WATER
+:rotm r000 0 0 0
+:rotm r100 30 0 0
+:rotm r110 180 0 0
+:vis hall OFF
+
+:volu box BOX 4*cm 5*cm 6*cm G4_Ge
+:place box 1 hall r100 0 0 0
+:color box 0.2 0.4 0.8
