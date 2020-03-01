@@ -1,4 +1,4 @@
-/geometry/source ../solidtg/polycone.tg
+/geometry/source ../solidtg/box.tg
 
 /run/initialize
 
@@ -7,9 +7,9 @@
 /vis/geometry/list
 
 /vis/open OGLI
-/vis/open OGLI 600x600+0+0
+/vis/open OGLI 1600x1600+0+0
 /vis/drawVolume
-/vis/scene/add/axes 0 0 0 2 m
+/vis/scene/add/axes 0 0 0 20 m
 /vis/viewer/set/background white
 /vis/viewer/set/style surface
 /vis/viewer/set/viewpointThetaPhi 25 35

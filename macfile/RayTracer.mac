@@ -1,4 +1,4 @@
-/geometry/source ../solidtg/polyhedra.tg
+/geometry/source ../solidtg/box.tg
 /run/initialize
 
 /geometry/test/run
@@ -11,4 +11,4 @@
 /vis/viewer/set/style surface
 /vis/drawVolume
 /vis/viewer/refresh
-/vis/rayTracer/trace polyhedra.jpeg
+/vis/rayTracer/trace box.jpeg

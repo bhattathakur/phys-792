@@ -1,4 +1,4 @@
-/geometry/source ../solidtg/tetrahedron.tg
+/geometry/source ../solidtg/box.tg
 
 /run/initialize
 
