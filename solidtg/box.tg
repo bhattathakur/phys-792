@@ -4,35 +4,35 @@
 :rotm r110 180 0 0
 :vis hall OFF
 
-//............BOX............................
+//1............BOX............................
 // X Half-length,Y Half-length, Z Half-length
 
 :volu box BOX 4*cm 5*cm 6*cm G4_Ge
 :place box 1 hall r100 0 0 0
 :color box 0.2 0.4 0.8
 
-//...........TUBE............................
+//2...........TUBE............................
 //Inner radius, Outer radius, Half length in z
 
 :volu tube TUBE 2*cm 3*cm 5*cm G4_Ge
 :place tube 1 hall r000 50 30 40
 :color tube 0.5 0.4 0.8
 
-//...........TUBS............................
+//3...........TUBS............................
 //Inner radius, Outer radius, Half length in z, Staring phi angle, Delta angle of the segment
 
 :volu tubes TUBS 2*cm 3*cm 5*cm 20 120 G4_Ge
 :place tubes 1 hall r000 -150 30 40
 :color tubes 0.5 0.4 0.2
 
-//...........CONE............................
+//4...........CONE............................
 //Inner radius at -fDz,  inner radius +fDz, outer radius at -fDz, Outer radius +fDz, Half length (z=fDz)
 
 :volu con CONE 2*cm 3*cm 5*cm 7*cm 5*cm G4_Ge
 :place con 1 hall r000 50 -30 -40
 :color con 0.1 0.4 0.2
 
-//...........CONS............................
+//5...........CONS............................
 //Inner radius at -fDz,  inner radius +fDz, outer radius at -fDz, Outer radius +fDz, Half length (z=fDz)
 //Starting angle of the segment, Delta angle of segment
 
@@ -40,7 +40,7 @@
 :place cones 1 hall r000 50 30 -40
 :color cones 0.1 0.5 0.2
 
-//............TRD...........................
+//6............TRD...........................
 //Half-length along x at the surface positioned at -dz, Half-length along x at the surface positioned at +dz
 //Half-length along y at the surface positioned at -dz, Half-length along y at the surface positioned at +dz
 //Half-length of z axis
@@ -49,7 +49,7 @@
 :PLACE trdd   1 hall r100 10*cm 5*cm 10*cm
 :color trdd  0.3 0.4 0.2
 
-//............PARA...........................
+//7............PARA...........................
 //Half-length in x, y, z
 //Angle formed by the y axis and by the plane joining the center of the faces 
 //paralled to the to the z-x plane at -dy and +dy
@@ -62,7 +62,7 @@
 :color para  0.3 0.4 0.2
 
 
-//.............TRAP..........................
+//8.............TRAP..........................
 //Half-length along the z-axis (=pDz)
 //Polar angle of the line joining the centers of the faces at -/+pDz
 //Azimuthal angle of the line joining the centers of the faces at -/+pDz
@@ -77,18 +77,18 @@
 //Angle with respect to the y axis from the center of the side at y=-pDy2 to the center at y=+pDy2 of the face at +pDz
 //alpha1 and alpha2 must be same
 
-//:VOLU  par TRAP 2*cm 30 20 3*cm 4*cm 2*cm 20 2*cm 4*cm 3*cm 20 G4_Ge
-//:PLACE par   1 hall r100 130*cm 10*cm 20*cm
-//:color par  0.3 0.2 0.2
+:VOLU  par TRAP 60*cm 20 5 40*cm 30*cm 40*cm 10 16*cm 10*cm 14*cm 10 G4_Ge
+:PLACE par   1 hall r100 130*cm 10*cm 20*cm
+:color par  0.3 0.2 0.2
 
-//..............SPHERE..........................
+//9..............SPHERE..........................
 //Inner radius, Outer radius, Staring angle of the segment, delta angle of segment, Theta starting angle, Theta angle of segment
 
 :VOLU sph SPHERE 2*cm 4*cm 30 45 34 65 G4_Ge
 :PLACE sph 1 hall r000 100*cm 10*cm 10*cm 
 :COLOR sph 0.1 0.4 0.8
 
-//..............ORB.......................
+//10..............ORB.......................
 //Full solid sphere
 //Outer radius
 
@@ -96,53 +96,115 @@
 :PLACE fsd 1 hall r000 100*cm 100*cm 10*cm 
 :COLOR fsd 0.1 0.4 0.4
 
-//...........TORUS......................
+//11...........TORUS......................
 //Inside radius, Outside radius, Swept radius of torus, starting Phi angle, delta angle of the segment
 :VOLU  tor TORUS 3*cm 4*cm 30*cm 45 60 G4_Ge
 :PLACE tor 1 hall r000 -100*cm 10*cm 100*cm 
 :COLOR tor 0.1 0.4 0.3
 
-//............ELLIPTICALTUBE............
+
+//12............POLYCONE.................
+:VOLU polycone POLYCONE
+1/4*180  //initial phi angle
+3/2*180  //fotal phi angle
+9        //number of z planes or Number of rz points
+0*cm   5*cm    //9 r,z points in order*cm
+10*cm  7*cm
+10*cm  9*cm
+5*cm   11*cm
+5*cm   25*cm
+10*cm  27*cm
+10*cm  29*cm
+2*cm   31*cm
+2*cm   35*cm
+G4_Ge
+
+:PLACE polycone 1 hall r000 0.0 0.0 0.0
+:COLOR polycone 0.1 0.8 0.1
+
+//14............ELLIPTICALTUBE............
 //Half length X, half length Y, half length Z
 
 :VOLU  ellitube ELLIPTICALTUBE 3*cm 4*cm 20*cm G4_Ge
 :PLACE ellitube 1 hall r000 -130*cm 40*cm -130*cm 
 :COLOR ellitube 0.1 0.8 0.3
 
-//..........ELLIPSOID...................
+//15..........ELLIPSOID...................
 //Semiaxis in X, Semiaxis in Y, Semiaxis at Z, Lower cut plane level z, Upper cut plane level 
 
 :VOLU  ellipso ELLIPSOID 13*cm 8*cm 10*cm 5*cm 6*cm G4_Ge
 :PLACE ellipso 1 hall r000 -180*cm 40*cm -70*cm 
 :COLOR ellipso 0.8 0.1 0.3
 
-//............ELLIPTICALCONE............
+//16............ELLIPTICALCONE............
 //Semiaxis in X, semiaxis in Y, Height of elliptical cone, Upper cut plane level 
 
 :VOLU  ellipcone ELLIPTICALCONE 2*cm 1*cm 3*cm 1.5*cm G4_Ge
 :PLACE ellipcone 1 hall r000 180*cm 40*cm 30*cm 
 :COLOR ellipcone 0.4 0.3 0.3
 
-//............HYPE............
+//17............HYPE............
 //Inner radius, Outer radius, Inner stereo angle, outer stereo angle, Half length in Z
 
 :VOLU  hype HYPE 10*cm 12*cm 25 35 6*cm G4_Ge
 :PLACE hype 1 hall r100 -100*cm 40*cm 60*cm 
 :COLOR hype 0.4 0.3 0.8
 
-//............TET.................
+//18............TET.................
 //Anchor point, point 2, point 3, point 4, flag indicating degenerancy of points
 :VOLU tet TET 
-0 0 sqrt(3)
-0 2*sqrt(2/3) -1/sqrt(3)
--sqrt(2) -sqrt(2/3) -1/sqrt(3)
-sqrt(2) -sqrt(2/3) -1/sqrt(3)
+0*cm 0*cm sqrt(3)*cm
+0*cm 2*sqrt(2/3)*cm -1/sqrt(3)*cm
+-sqrt(2)*cm -sqrt(2/3)*cm -1/sqrt(3)*cm
+sqrt(2)*cm -sqrt(2/3)*cm -1/sqrt(3)*cm
 G4_Ge
 :PLACE tet 1 hall r100 225*cm 10*cm 5*cm
 :COLOR tet 0.1 0.3 0.5
 
-//..................TWISTEDBOX......................
+//19..................TWISTEDBOX......................
 //Twist angle, Half x length, Half y length, Half z length
 :VOLU twistedbox TWISTEDBOX 1 30*cm 40*cm 60*cm G4_Ge
 :PLACE twistedbox 1 hall r100 225*cm -10*cm -20*cm
 :COLOR twistedbox 0.7 0.1 0.4
+
+//20..................TWISTEDTRAP......................
+:VOLU twisttrap TWISTEDTRAP
+30*degree //twisted angle
+60*cm //Half z length (=pDz)
+20*degree //Polar angle of the ine joining the center of faces at -/+ pD//z
+5*degree //pPhi
+40*cm //Half y length at -pDz (=pDy2)
+30*cm //Half x length at -pDz,y=-pDy1
+40*cm    //Half x length at -pDz,y=+pDy1
+16*cm //Half y length at +pDz
+10*cm //half y length at +pDz,y=-pDy2
+14*cm //half y length at +pDz,y=+pDy2
+10*degree //angle w.r.t the y axis from the center of the side 
+G4_Ge
+:place twisttrap 1 hall r000 0 0 0
+:color twisttrap 0.2 0.4 0.3
+
+//21............TWISTEDTRD.................
+:VOLU twistedtr TWISTEDTRD
+30*cm //Half x-length at the surface at -dz
+10*cm //Half x-length at the surface at +dz
+40*cm //Half y-length at the surface at -dz
+15*cm //Half y-length at the surface at +dz
+60*cm //Half z length
+30*degree //twisted angle
+G4_Ge
+
+:PLACE twistedtr 1 hall r000 0.0 0.0 0.0
+:COLOR twistedtr 0.7 0.2 0.1
+
+//............TWISTEDTUBS.................
+:VOLU twistedtu TWISTEDTUBS
+60    //twisted angle
+10*cm //Inner radius at end-cap
+15*cm //Outer radius at end-cap
+20*cm //Half z length
+90    //Phi angle of a segment
+G4_Ge
+
+:PLACE twistedtu 1 hall r000 0.0 0.0 0.0
+:COLOR twistedtu 0.4 0.2 0.1

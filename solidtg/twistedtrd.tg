@@ -1,0 +1,15 @@
+:volu hall BOX 1*m 1*m 1*m G4_WATER
+:rotm r000 0 0 0
+:vis hall OFF
+//............TWISTEDTRD.................
+:VOLU twistedtr TWISTEDTRD
+30*cm //Half x-length at the surface at -dz
+10*cm //Half x-length at the surface at +dz
+40*cm //Half y-length at the surface at -dz
+15*cm //Half y-length at the surface at +dz
+60*cm //Half z length
+30*degree //twisted angle
+G4_Ge
+
+:PLACE twistedtr 1 hall r000 0.0 0.0 0.0
+:COLOR twistedtr 0.7 0.2 0.1

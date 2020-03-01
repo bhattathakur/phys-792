@@ -1,10 +1,23 @@
-
 :volu hall BOX 10*m 10*m 10*m G4_WATER
 :rotm r000 0 0 0
 :rotm r100 30 0 0
 :rotm r110 180 0 0
 :vis hall OFF
 
-:volu box BOX 4*cm 5*cm 6*cm G4_Ge
-:place box 1 hall r100 0 0 0
-:color box 0.2 0.4 0.8
+//pDx1 = 30, pDx2 = 40, pDy1 = 40, pDx3 = 10, pDx4 = 14, pDy2 = 16, pDz = 60, pTheta = 20*Degree, pDphi = 5*Degree, pAlph = 10*Degree, twistedangle = 30*Degree
+
+:VOLU twisttrap TWISTEDTRAP
+30*degree //twisted angle
+60*cm //Half z length (=pDz)
+20*degree //Polar angle of the ine joining the center of faces at -/+ pD//z
+5*degree //pPhi
+40*cm //Half y length at -pDz (=pDy2)
+30*cm //Half x length at -pDz,y=-pDy1
+40*cm    //Half x length at -pDz,y=+pDy1
+16*cm //Half y length at +pDz
+10*cm //half y length at +pDz,y=-pDy2
+14*cm //half y length at +pDz,y=+pDy2
+10*degree //angle w.r.t the y axis from the center of the side 
+G4_Ge
+:place twisttrap 1 hall r000 0 0 0
+:color twisttrap 0.2 0.4 0.3
