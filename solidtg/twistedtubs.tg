@@ -1,0 +1,14 @@
+:volu hall BOX 1*m 1*m 1*m G4_WATER
+:rotm r000 0 0 0
+:vis hall OFF
+//............TWISTEDTUBS.................
+:VOLU twistedtu TWISTEDTUBS
+60    //twisted angle
+10*cm //Inner radius at end-cap
+15*cm //Outer radius at end-cap
+20*cm //Half z length
+90    //Phi angle of a segment
+G4_Ge
+
+:PLACE twistedtu 1 hall r000 0.0 0.0 0.0
+:COLOR twistedtu 0.4 0.2 0.1
