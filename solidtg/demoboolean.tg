@@ -1,0 +1,31 @@
+// Define a parameter for later use
+:P POSZ 50*cm
+:P ROUTER 30*cm
+:P HEIGHT 40*cm
+:P THICKNESS 1*cm
+
+// Define rotation matrix
+:ROTM R00 1. 0. 0. 0. 1. 0. 0. 0. 1.  // unit matrix
+:ROTM R60 0. 60. 0. //60 degree with y axis
+
+// Define volumes and place them
+:VOLU world BOX 2*m 2*m 3*$POSZ G4_AIR
+:VIS world OFF
+
+//Creating an outer cylinder
+:SOLID outer_cylinder TUBS 0*cm $ROUTER $HEIGHT/2 0 360 
+
+
+//Creating an inner cylinder
+:SOLID inner_cylinder TUBS 0*cm $ROUTER-$THICKNESS $HEIGHT/2-$THICKNESS/2 0 360 
+
+//Creating the wing of the hat
+:SOLID wing TUBS $ROUTER-$THICKNESS $ROUTER+12*cm $THICKNESS/2 0 360
+                      
+//Performing the subtraction between two cylinders
+:SOLID myhat SUBTRACTION outer_cylinder inner_cylinder R00 0. 0. 0.
+
+//Performing the union between myhat and wing
+:VOLU final UNION myhat wing R00 0. 0. -$HEIGHT/2 G4_Fe //position x,y and z is the position of second w.r.t first
+:PLACE final 1 world R60 0. 0. 0
+:COLOR final 0.5 0.1 0.1 0.5 
