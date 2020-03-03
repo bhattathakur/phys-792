@@ -6,3 +6,5 @@
 *~
 *.swp
 *.heprep
+*.history
+*.default
