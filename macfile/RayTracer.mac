@@ -1,8 +1,5 @@
 /geometry/source ../solidtg/polyhedra.tg
-<<<<<<< HEAD
 
-=======
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 /run/initialize
 
 /geometry/test/run
@@ -15,8 +12,5 @@
 /vis/viewer/set/style surface
 /vis/drawVolume
 /vis/viewer/refresh
-<<<<<<< HEAD
 /vis/rayTracer/trace box.jpeg
-=======
 /vis/rayTracer/trace polyhedra.jpeg
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480

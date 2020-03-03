@@ -4,7 +4,7 @@
 //............POLYCONE.................
 :VOLU polycone POLYCONE
 1/4*180  //initial phi angle
-3/2*180  //fotal phi angle
+3/2*180  //total phi angle
 9        //number of z planes or Number of rz points
 0   5    //9 r,z points in order
 10  7
