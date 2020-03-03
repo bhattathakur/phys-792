@@ -3,29 +3,29 @@
 :vis hall OFF
 //............POLYHEDRA.................
 :VOLU polyheda POLYHEDRA
--45 			//-1/4*180
-225 			//5/4*180 
-3 
-7    			//initial phi angle, Total phi angle, number of sides, number of rz points
-0	    0	0 		//r,z for each rz corner
-5	    0   15
-8	    0   15
-13	    0   4 
-30	    0   4 
-32	    0   10
-35	    0   10
+//-45 			//-1/4*180
+//225 			//5/4*180 
+//3 
+//7    			//initial phi angle, Total phi angle, number of sides, number of rz points
+//0	    	0 		//r,z for each rz corner
+//5	       15
+//8	       15
+//13	      4 
+//30	       4 
+//32	       10
+//35	       10
 //G4_Ge
 //20 180 3 2
 //1800. 0. 30.
 //1900. 0. 32
-////20   180 3 4   //initial phi angle
-////180     //total phi angle
-////3	//Number of sides
-////4	//Number of z planes or rz points
-//1900 32 //4 r,z points
-//1800 30
-//1800 0
-//1900 0
+20   180 3 4   //initial phi angle
+//180     //total phi angle
+//3	//Number of sides
+//4	//Number of z planes or rz points
+1900 32 //4 r,z points
+1800 30
+1800 0
+1900 0
 G4_Ge
 
 :PLACE polyheda 1 hall r000 0.0 0.0 0.0
