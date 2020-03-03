@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 //Including new file from outside
 #include ../solidtg/twistedtubs.tg
+=======
+>>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :volu hall BOX 10*m 10*m 10*m G4_WATER
 :rotm r000 0 0 0
 :rotm r100 30 0 0
@@ -23,5 +26,8 @@
 G4_Ge
 :place twisttrap 1 hall r000 0 0 0
 :color twisttrap 0.2 0.4 0.3
+<<<<<<< HEAD
 :PLACE twistedtu 1 hall r000 200.0*cm 0.0*cm 0.0*cm
 :COLOR twistedtu 0.4 0.2 0.1
+=======
+>>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480

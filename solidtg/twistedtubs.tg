@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 //:volu hall BOX 1*m 1*m 1*m G4_WATER
 //:rotm r000 0 0 0
 //:vis hall OFF
+=======
+:volu hall BOX 1*m 1*m 1*m G4_WATER
+:rotm r000 0 0 0
+:vis hall OFF
+>>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 //............TWISTEDTUBS.................
 :VOLU twistedtu TWISTEDTUBS
 60    //twisted angle
@@ -10,5 +16,10 @@
 90    //Phi angle of a segment
 G4_Ge
 
+<<<<<<< HEAD
 //:PLACE twistedtu 1 hall r000 0.0 0.0 0.0
 //:COLOR twistedtu 0.4 0.2 0.1
+=======
+:PLACE twistedtu 1 hall r000 0.0 0.0 0.0
+:COLOR twistedtu 0.4 0.2 0.1
+>>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
