@@ -1,4 +1,4 @@
-/geometry/source ../solidtg/polyhedra.tg
+/geometry/source ../solidtg/cubicframe.tg
 
 /run/initialize
 

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/geometry/source ../solidtg/demoboolean.tg
-=======
-/geometry/source ../solidtg/polycone.tg
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
+/geometry/source ../solidtg/cubicframe.tg
 
 /run/initialize
 
@@ -11,15 +7,6 @@
 /vis/geometry/list
 
 /vis/open OGLI
-<<<<<<< HEAD
-/vis/open OGLI 1600x1600+0+0
-/vis/drawVolume
-/vis/scene/add/axes 0 0 0 1 m
-/vis/viewer/set/background white
-/vis/viewer/set/style surface
-/vis/viewer/set/viewpointThetaPhi 25 35
-/vis/viewer/zoom 1
-=======
 /vis/open OGLI 600x600+0+0
 /vis/drawVolume
 /vis/scene/add/axes 0 0 0 2 m
@@ -27,7 +14,6 @@
 /vis/viewer/set/style surface
 /vis/viewer/set/viewpointThetaPhi 25 35
 /vis/viewer/zoom 2
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 /vis/viewer/flush
 
 /vis/ogl/set/exportFormat pdf
