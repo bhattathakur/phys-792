@@ -1,0 +1,15 @@
+:P angle 90
+:VOLU world BOX 10*m 10*m 10*m G4_AIR
+:VOLU sphere SPHERE 90 100 0 360 0 $angle G4_Ge //inner radius, outer radius, phi start,  delta phi, theta start, delta theta
+:VOLU sphere1 SPHERE 110 150 0 360 0 $angle G4_Ge
+:VOLU sphere2 SPHERE 160 200 0 360 0 $angle G4_Ge
+//:VOLU base TUBS 50*cm 140*cm 50*cm 0 360 G4_Ge
+:ROTM r000 0 180 0
+:place sphere 1 world r000 0 0 0
+:place sphere1 1 world r000 0 0 0
+:place sphere2 1 world r000 0 0 0
+
+:color sphere 0.0 0.0 1.0
+:color sphere1 1.0 0.0 0.0
+:color sphere2 0.0 1.0 0.0
+:vis world OFF
