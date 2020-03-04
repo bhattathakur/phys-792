@@ -1,57 +1,32 @@
-:volu hall BOX 10*cm 10*cm 10*cm G4_WATER
-:rotm r000 0 0 0
-:vis hall OFF
+:VOLU hall BOX 10*cm 10*cm 10*cm G4_WATER
+:ROTM r000 0 0 0
+:VIS hall OFF
+
 //............POLYHEDRA.................
 :VOLU polyheda POLYHEDRA
-<<<<<<< HEAD
-//-45 			//-1/4*180
-//225 			//5/4*180 
-//3 
-//7    			//initial phi angle, Total phi angle, number of sides, number of rz points
-//0	    	0 		//r,z for each rz corner
-//5	       15
-//8	       15
-//13	      4 
-//30	       4 
-//32	       10
-//35	       10
-=======
--45 			//-1/4*180
-225 			//5/4*180 
-3 
-7    			//initial phi angle, Total phi angle, number of sides, number of rz points
-0	    0	0 		//r,z for each rz corner
-5	    0   15
-8	    0   15
-13	    0   4 
-30	    0   4 
-32	    0   10
-35	    0   10
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
-//G4_Ge
-//20 180 3 2
-//1800. 0. 30.
-//1900. 0. 32
-<<<<<<< HEAD
-20   180 3 4   //initial phi angle
-//180     //total phi angle
-//3	//Number of sides
-//4	//Number of z planes or rz points
-1900 32 //4 r,z points
-1800 30
-1800 0
-1900 0
-=======
-////20   180 3 4   //initial phi angle
-////180     //total phi angle
-////3	//Number of sides
-////4	//Number of z planes or rz points
-//1900 32 //4 r,z points
-//1800 30
-//1800 0
-//1900 0
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
+-45 			//intial phi angle
+225 			//Total phi angle
+3         //Number of sides
+7    			//number of sides or number of rz points
+0  0	   	//7 r,z for each rz corner
+15  5	   
+15  8	   
+4   13	 
+4   30	 
+10  32	 
+10  35	 
 G4_Ge
+//http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/ForApplicationDeveloper/html/Detector/Geometry/geomSolids.html
+//http://geant4.web.cern.ch/sites/geant4.web.cern.ch/files/geant4/collaboration/working_groups/geometry/docs/textgeom/textgeom.pdf
+//20.         //initial phi angle
+//180.        //total phi angle
+//3           //Number of sides
+//4           //number of z planes or rz points
+//1900. 32.   //4 r,z points
+//1800. 30. 
+//1800. 0.
+//1900. 0.
+//G4_Ge       //material
 
 :PLACE polyheda 1 hall r000 0.0 0.0 0.0
 :COLOR polyheda 0.1 0.8 0.1
