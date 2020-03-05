@@ -1,4 +1,4 @@
-/geometry/source ../solidtg/cubicframe.tg
+/geometry/source ../solidtg/hat.tg
 
 /run/initialize
 
