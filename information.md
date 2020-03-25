@@ -1,4 +1,4 @@
-## Brief description of different interaction process associated with `\alpha`, `\beta` and `\gamma` particles in air.
+## Brief description of different interaction process associated with `$$\alpha$$`, `\beta` and `\gamma` particles in air.
 * **initStep**\
    It is not a Physics process but it reveals the initial position where the particle is created.
 * **Transportation**\
