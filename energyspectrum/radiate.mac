@@ -1,7 +1,7 @@
 # print macro commands on screen
 /control/verbose 1
 # geometry must be specified before /run/initialize
-/geometry/source detector.tg
+/geometry/source hw16detector.tg
 # initialize geometry and physics
 /run/initialize
 
@@ -36,4 +36,4 @@
 /run/verbose 2
 /run/printProgress 1000
 # start simulation
-/run/beamOn 50000
+/run/beamOn 20000
