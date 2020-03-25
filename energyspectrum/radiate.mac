@@ -36,4 +36,4 @@
 /run/verbose 2
 /run/printProgress 1000
 # start simulation
-/run/beamOn 20000
+/run/beamOn 500000

@@ -1,8 +1,8 @@
 // default unit for length is mm
-:volu world BOX 500 500 500 G4_AIR
-//:color world 0.5 0.5 0.5
+:volu world BOX 100 100 100 G4_AIR
+:color world 0.5 0.5 0.5
 
-// two germanium detectors in a vacuum chamber
+// two cylinderical germanium detectors in a vacuum chamber
 :volu chamber TUBE 0 52 62 G4_STAINLESS-STEEL
 :volu vacuum  TUBE 0 50 60 G4_Galactic
 :volu outer TUBE 0 30 40 G4_Ge
