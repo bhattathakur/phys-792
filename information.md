@@ -1,4 +1,4 @@
-## Brief description of different interaction process associated with `$$\alpha$$`, $\beta$ and `\gamma` particles in air.
+## Brief description of different interaction process associated with alpha, beta and gamma particles in air.
 * **initStep**\
    It is not a Physics process but it reveals the initial position where the particle is created.
 * **Transportation**\
@@ -12,12 +12,12 @@
 * **eBrem**\
     The process of production of electromagnetic radiation during the deceleration of charged particle by the deflection of another localized charged particle.
 * **phot**\
-    The process of emission of electron from the atoms by the effect of incident photons (`\gamma` radiation).
+    The process of emission of electron from the atoms by the effect of incident photons (gamma radiation).
 * **Rayl**\
     The elastic scattering of the electromagnetic radiation by the particle with very small wavelength in comparison to incident radiation.
 * **compt**\
-    The scattering off of the photon (`\gamma` particles) by charged particle, generally by the electrons.
+    The scattering off of the photon (gamma particles) by charged particle, generally by the electrons.
 * **conv**\
     The gamma conversion process. It is a radioactive decay process wherein an excited nucleus interacts electromagnetically with one of the orbital electrons of the atom causing the emission of electrons from orbit.
 * **annihil**\
-    The process in which a particle and its antiparticle interact and disappear with the release energy. For example, annihilation of electron (`e^{-}`) and positron (`e^{+}`).
+    The process in which a particle and its antiparticle interact and disappear with the release energy. For example, annihilation of electron (e^{-}) and positron (e^{+}).
