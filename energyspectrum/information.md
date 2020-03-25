@@ -20,4 +20,4 @@
 * **conv**\
     The gamma conversion process. It is a radioactive decay process wherein an excited nucleus interacts electromagnetically with one of the orbital electrons of the atom causing the emission of electrons from orbit.
 * **annihil**\
-    The process in which a particle and its antiparticle interact and disappear with the release energy. For example, annihilation of electron (e^{-}) and positron (e^{+}).
+    The process in which a particle and its antiparticle interact and disappear with the release energy. For example, annihilation of electron and positron.
