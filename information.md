@@ -1,5 +1,6 @@
-##Brief description of different interaction process are below:
-* **initStep**
+## Brief description of different interaction process are below:
+==================================================================================
+* **initStep**\
    It is not a Physics process but it reveals the initial position where the particle is created.
 * **Transportation**
     It is also not a Physics process but just the transfer of a particle to new position without any loss of energy.
