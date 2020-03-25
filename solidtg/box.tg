@@ -22,22 +22,14 @@
 //Inner radius, Outer radius, Half length in z, Staring phi angle, Delta angle of the segment
 
 :volu tubes TUBS 2*cm 3*cm 5*cm 20 120 G4_Ge
-<<<<<<< HEAD
 :place tubes 1 hall r000 -150*cm 30*cm 40*cm
-=======
-:place tubes 1 hall r000 -150 30 40
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :color tubes 0.5 0.4 0.2
 
 //4...........CONE............................
 //Inner radius at -fDz,  inner radius +fDz, outer radius at -fDz, Outer radius +fDz, Half length (z=fDz)
 
 :volu con CONE 2*cm 3*cm 5*cm 7*cm 5*cm G4_Ge
-<<<<<<< HEAD
 :place con 1 hall r000 50*cm -30*cm -40*cm
-=======
-:place con 1 hall r000 50 -30 -40
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :color con 0.1 0.4 0.2
 
 //5...........CONS............................
@@ -45,11 +37,7 @@
 //Starting angle of the segment, Delta angle of segment
 
 :volu  cones CONS 2*cm 3*cm 5*cm 7*cm 5*cm 20 93 G4_Ge
-<<<<<<< HEAD
 :place cones 1 hall r000 50*cm 30*cm -40*cm
-=======
-:place cones 1 hall r000 50 30 -40
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :color cones 0.1 0.5 0.2
 
 //6............TRD...........................
@@ -58,11 +46,7 @@
 //Half-length of z axis
 
 :VOLU  trdd TRD 2*cm 3*cm 1*cm 2*cm 3*cm G4_Ge
-<<<<<<< HEAD
 :PLACE trdd   1 hall r100 -150*cm 5*cm 10*cm
-=======
-:PLACE trdd   1 hall r100 10*cm 5*cm 10*cm
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :color trdd  0.3 0.4 0.2
 
 //7............PARA...........................
@@ -101,11 +85,7 @@
 //Inner radius, Outer radius, Staring angle of the segment, delta angle of segment, Theta starting angle, Theta angle of segment
 
 :VOLU sph SPHERE 2*cm 4*cm 30 45 34 65 G4_Ge
-<<<<<<< HEAD
 :PLACE sph 1 hall r000 -1000*cm 10*cm 10*cm 
-=======
-:PLACE sph 1 hall r000 100*cm 10*cm 10*cm 
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :COLOR sph 0.1 0.4 0.8
 
 //10..............ORB.......................
@@ -139,12 +119,8 @@
 2*cm   35*cm
 G4_Ge
 
-<<<<<<< HEAD
 :PLACE polycone 1 hall r000 700.0*cm -100.0*cm 50.0*cm
 
-=======
-:PLACE polycone 1 hall r000 0.0 0.0 0.0
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :COLOR polycone 0.1 0.8 0.1
 
 //14............ELLIPTICALTUBE............
@@ -165,11 +141,7 @@ G4_Ge
 //Semiaxis in X, semiaxis in Y, Height of elliptical cone, Upper cut plane level 
 
 :VOLU  ellipcone ELLIPTICALCONE 2*cm 1*cm 3*cm 1.5*cm G4_Ge
-<<<<<<< HEAD
 :PLACE ellipcone 1 hall r000 -380*cm 40*cm 30*cm 
-=======
-:PLACE ellipcone 1 hall r000 180*cm 40*cm 30*cm 
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :COLOR ellipcone 0.4 0.3 0.3
 
 //17............HYPE............
@@ -193,11 +165,7 @@ G4_Ge
 //19..................TWISTEDBOX......................
 //Twist angle, Half x length, Half y length, Half z length
 :VOLU twistedbox TWISTEDBOX 1 30*cm 40*cm 60*cm G4_Ge
-<<<<<<< HEAD
 :PLACE twistedbox 1 hall r100 475*cm -10*cm -20*cm
-=======
-:PLACE twistedbox 1 hall r100 225*cm -10*cm -20*cm
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :COLOR twistedbox 0.7 0.1 0.4
 
 //20..................TWISTEDTRAP......................
@@ -214,11 +182,7 @@ G4_Ge
 14*cm //half y length at +pDz,y=+pDy2
 10*degree //angle w.r.t the y axis from the center of the side 
 G4_Ge
-<<<<<<< HEAD
 :place twisttrap 1 hall r000 300*cm 300*cm 300*cm
-=======
-:place twisttrap 1 hall r000 0 0 0
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :color twisttrap 0.2 0.4 0.3
 
 //21............TWISTEDTRD.................
@@ -231,17 +195,11 @@ G4_Ge
 30*degree //twisted angle
 G4_Ge
 
-<<<<<<< HEAD
 :PLACE twistedtr 1 hall r000 500.0*cm 400.0*cm 400.0*cm
 :COLOR twistedtr 0.7 0.2 0.1
 
-//22............TWISTEDTUBS.................
-=======
-:PLACE twistedtr 1 hall r000 0.0 0.0 0.0
-:COLOR twistedtr 0.7 0.2 0.1
 
-//............TWISTEDTUBS.................
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
+//22............TWISTEDTUBS.................
 :VOLU twistedtu TWISTEDTUBS
 60    //twisted angle
 10*cm //Inner radius at end-cap
@@ -250,9 +208,5 @@ G4_Ge
 90    //Phi angle of a segment
 G4_Ge
 
-<<<<<<< HEAD
 :PLACE twistedtu 1 hall r000 600.0*cm 600.0*cm 600.0*cm
-=======
-:PLACE twistedtu 1 hall r000 0.0 0.0 0.0
->>>>>>> 912a072c3b2a0bb70d2b61db0b4f77b18c8bc480
 :COLOR twistedtu 0.4 0.2 0.1

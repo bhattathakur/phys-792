@@ -4,7 +4,7 @@
   <heprep:attdef extra="" name="Generator" type="Physics"
   desc="HepRep Data Generator"/>
   <heprep:attvalue showLabel="NONE" name="Generator"
-    value=" Geant4 version Name: geant4-10-05    (7-December-2018)"/>
+    value=" Geant4 version Name: geant4-10-04-patch-02    (25-May-2018)"/>
   <heprep:attdef extra="" name="LVol" type="Physics"
   desc="Logical Volume"/>
   <heprep:attdef extra="" name="Region" type="Physics"
