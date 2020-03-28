@@ -5,17 +5,17 @@
 // two cylinderical germanium detectors in a vacuum chamber
 :volu chamber TUBE 0 52 62 G4_STAINLESS-STEEL
 :volu vacuum  TUBE 0 50 60 G4_Galactic
-:volu outer TUBE 0 30 40 G4_Ge
-:volu inner TUBE 0 10 10 G4_Ge
+:volu outer(S) TUBE 0 30 40 G4_Ge
+:volu inner(S) TUBE 0 10 10 G4_Ge
 :color chamber 0.2 0.9 0.3
 :color vacuum  0.1 0.1 0.1
-:color outer 0.9 0.9 0.1
-:color inner 0.9 0.9 0.4
+:color outer(S) 0.9 0.9 0.1
+:color inner(S) 0.9 0.9 0.4
 
 :rotm r000 0 0 0
 // place them off center to demonstrate the
 // difference between x, y, z and x0, y0, z0
 :place chamber 3 world r000 40 40 20
 :place vacuum 0 chamber r000 0 0 0
-:place outer 1 vacuum r000 0 0 0
-:place inner 2 outer r000 0 0 0
+:place outer(S) 1 vacuum r000 0 0 0
+:place inner(S) 2 outer(S) r000 0 0 0
