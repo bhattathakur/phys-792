@@ -15,3 +15,5 @@
 *.prim
 *.html
 *.x3d
+*.root
+*.properties
