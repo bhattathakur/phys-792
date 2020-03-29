@@ -1,13 +1,14 @@
 # print macro commands on screen
 /control/verbose 1
 # geometry must be specified before /run/initialize
-/geometry/source hw16part2.tg
+/geometry/source hw17.tg
 # initialize geometry and physics
 /run/initialize
 
 # change particle and its energy here
-/gps/particle gamma
+/gps/particle e-
 /gps/energy 2.6 MeV
+#/gps/energy 1 MeV
 /gps/ang/type iso
 
 /gps/direction 1 0 0

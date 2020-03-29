@@ -1,0 +1,16 @@
+// default unit for length is mm
+:volu world BOX 1500 500 500 G4_AIR
+:vis world OFF
+
+
+//A cuboidal NaI crystal block
+:volu NaIblock(S) BOX 500 200 200 G4_SODIUM_IODIDE
+
+//colors of detector
+:color NaIblock(S) 0.94 0.97 1.0 //grey
+
+//rotation matrix
+:rotm r000 0 0 0 
+
+//placement of detectors in the world
+:place NaIblock(S) 1 world r000 600 0 0  //at 100, 0, 0 of world
