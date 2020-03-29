@@ -1,4 +1,5 @@
 .ipynb_checkpoints
+*.root
 *.log
 *.exe
 *.jpeg
