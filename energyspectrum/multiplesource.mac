@@ -1,0 +1,140 @@
+#print macro commands on screen
+/control/verbose 1
+
+#alias to use later
+#/control/alias srcpos "0 0 0"
+
+#geometry should be specified before initilization
+/geometry/source hw17.tg
+
+#initilization
+/run/initialize
+
+## electron1
+/gps/source/intensity 1
+/gps/particle e-
+/gps/pos/type Point
+/gps/pos/centre 0 0 0 mm
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/ene/mono 1 MeV
+/gps/direction 1 0 0
+
+## electron2
+/gps/source/add 1
+/gps/particle e-
+/gps/pos/type Point
+/gps/pos/centre 0 0 300 mm
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/ene/mono 10 MeV
+/gps/direction 1 0 0
+
+## electron3
+/gps/source/add 1
+/gps/particle e-
+/gps/pos/type Point
+/gps/pos/centre 0 0 -300 mm
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/ene/mono 100 MeV
+/gps/direction 1 0 0
+
+### electron4
+#/gps/source/add 1
+#/gps/particle e-
+#/gps/pos/type Point
+#/gps/pos/centre {srcpos}
+#/gps/ang/type iso
+#/gps/ene/type Mono
+#/gps/ene/mono 20 MeV
+#/gps/direction 1 0 0
+#
+### electron5
+#/gps/source/add 1
+#/gps/particle e-
+#/gps/pos/type Point
+#/gps/pos/centre {srcpos}
+#/gps/ang/type iso
+#/gps/ene/type Mono
+#/gps/ene/mono 25 MeV
+#/gps/direction 1 0 0
+#
+### electron6
+#/gps/source/add 1
+#/gps/particle e-
+#/gps/pos/type Point
+#/gps/pos/centre {srcpos}
+#/gps/ang/type iso
+#/gps/ene/type Mono
+#/gps/ene/mono 30 MeV
+#/gps/direction 1 0 0
+#
+### electron7
+#/gps/source/add 1
+#/gps/particle e-
+#/gps/pos/type Point
+#/gps/pos/centre {srcpos}
+#/gps/ang/type iso
+#/gps/ene/type Mono
+#/gps/ene/mono 35 MeV
+#/gps/direction 1 0 0
+#
+### electron8
+#/gps/source/add 1
+#/gps/particle e-
+#/gps/pos/type Point
+#/gps/pos/centre {srcpos}
+#/gps/ang/type iso
+#/gps/ene/type Mono
+#/gps/ene/mono 40 MeV
+#/gps/direction 1 0 0
+#
+### electron9
+#/gps/source/add 1
+#/gps/particle e-
+#/gps/pos/type Point
+#/gps/pos/centre {srcpos}
+#/gps/ang/type iso
+#/gps/ene/type Mono
+#/gps/ene/mono 45 MeV
+#/gps/direction 1 0 0
+#
+### electron10
+#/gps/source/add 1
+#/gps/particle e-
+#/gps/pos/type Point
+#/gps/pos/centre {srcpos}
+#/gps/ang/type iso
+#/gps/ene/type Mono
+#/gps/ene/mono 50 MeV
+#/gps/direction 1 0 0
+
+# list all sources
+/gps/source/list
+
+#visualize geometry and events for debugging
+/vis/open HepRepFile
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 10
+
+#turn on detailed information about tracking
+/tracking/verbose 2
+
+#dump a few events for debugging
+/run/beamOn 10
+
+#turn off screen printing for fast simulation
+/vis/disable
+/tracking/verbose 0
+
+#turn on data recording in a file
+/analysis/setFileName multielectrons
+
+#turn on progress report for every 1000 events
+/run/verbose 2
+/run/printProgress 1000
+
+#start simulation
+/run/beamOn 5000

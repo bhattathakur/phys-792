@@ -1,0 +1,16 @@
+// default unit for length is mm
+:volu world BOX 500 500 500 G4_AIR
+:vis world OFF
+
+
+//A cuboidal air
+:volu airdet(S) BOX 200 200 200 G4_AIR
+
+//colors of detector
+:color airdet(S) 0.94 0.97 1.0 //alice blue
+
+//rotation matrix
+:rotm r000 0 0 0 
+
+//placement of detectors in the world
+:place airdet(S) 1 world r000 600 0 0  //at 600, 0, 0 of world
